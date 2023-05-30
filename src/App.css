@@ -1,0 +1,157 @@
+.title-font-size {
+    font-size: 2.3em;
+}
+
+.top-nav.navbar {
+    z-index: 100;
+    padding: 15px 0 !important;
+}
+
+.nav-link:hover {
+    color: black !important;
+}
+
+.nav-link::after {
+    transition: 300ms;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, #2ab6d9, #30d35c);
+    display: block;
+    opacity: 0;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+.invite-button:hover {
+    opacity: 0.7 !important;
+}
+
+
+
+.main-content-image-container {
+    position: relative;
+}
+
+.main-content-image-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(./src/assets/bg-intro-desktop.svg);
+    width: 100%;
+    height: 635px;
+    max-height: 635px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 100px -145px;
+    z-index: -1;
+}
+
+.main-content-image {
+    width: 600px;
+    max-width: 600px;
+    transform: translate(110px, -90px);
+    position: absolute
+}
+
+.main-content-description-container {
+    flex: 1;
+    padding-left: 200px;
+    padding-right: 80px;
+    margin: 100px 0
+}
+
+.services-wrapper {
+    padding: 100px 200px;
+    background: hsl(220, 16%, 96%);
+}
+
+.articles-wrapper {
+    padding: 100px 200px;
+}
+
+.article-card-title {
+    font-size: 22px;
+    line-height: 22px;
+    cursor: pointer
+}
+
+.article-card-title:hover {
+    color: hsl(136, 65%, 51%);
+}
+
+.footer {
+    background-color: hsl(233, 26%, 24%);
+    padding: 100px 200px;
+}
+
+.footer-brand-logo>g>path {
+    fill: white;
+}
+
+.social-icons>svg:hover {
+    cursor: pointer;
+}
+
+.social-icons>svg>path:hover {
+    fill: hsl(136, 65%, 51%);
+}
+
+.footer-middle-menu>div>div:hover {
+    color: hsl(136, 65%, 51%);
+    cursor: pointer;
+}
+
+@media screen and (max-width:990px) {
+    .main-content-description-container {
+        padding: 20px;
+    }
+
+    .services-wrapper {
+        padding: 20px;
+    }
+
+    .articles-wrapper {
+        padding: 20px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .top-nav-invite-button {
+        display: none !important;
+    }
+
+    .nav-link:hover::after {
+        opacity: 0;
+    }
+
+    .main-content-image-container::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url(./src/assets/bg-intro-mobile.svg);
+        width: 100%;
+        height: 535px;
+        max-height: 535px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: -1px -45px;
+        z-index: -1;
+    }
+
+    .main-content-image {
+        width: 400px;
+        max-width: 380px;
+        transform: translate(0px, -90px);
+        position: static;
+        display: block;
+    }
+
+    .main-content-description-container {
+        margin: 0 0 100px;
+    }
+}
